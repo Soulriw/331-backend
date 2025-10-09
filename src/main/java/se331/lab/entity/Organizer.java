@@ -20,7 +20,7 @@ public class Organizer {
     Long id;
     String name;
     @OneToMany(mappedBy = "organizer")
-    @JsonIgnore
+//    @JsonIgnore
     @Builder.Default
     List<Event> ownEvents = new ArrayList<>();
 }
