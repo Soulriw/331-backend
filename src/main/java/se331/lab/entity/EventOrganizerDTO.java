@@ -1,4 +1,4 @@
-package se331.lab.repository;
+package se331.lab.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
