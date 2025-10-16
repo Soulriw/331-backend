@@ -23,4 +23,7 @@ public class Organizer {
     @JsonIgnore
     @Builder.Default
     List<Event> ownEvents = new ArrayList<>();
+    @ElementCollection(fetch = FetchType.EAGER)
+    List<String> images = new ArrayList<>();
+
 }
