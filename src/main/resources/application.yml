@@ -15,3 +15,11 @@ spring:
         dialect: org.hibernate.dialect.MySQLDialect
     hibernate:
       ddl-auto: create-drop
+supabase:
+  storage:
+    endpoint:  https://igdfvmiagfmfrjqmuiln.storage.supabase.co/storage/v1/s3
+    endpoint_output:   https://igdfvmiagfmfrjqmuiln.storage.supabase.co/storage/v1/object/public
+    bucket: lab331
+    region: ap-south-1
+    accessKey: 0aec57ef5c9c9d58068266918cf24eae
+    secretKey: 3206aa5948b8d1bcd54711c861fdf12f59db40a0ed63b9c219af10c32a15d198

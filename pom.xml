@@ -72,6 +72,11 @@
 			<version>${org.mapstruct.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>s3</artifactId>
+			<version>2.25.40</version> <!-- check for latest at https://mvnrepository.com/artifact/software.amazon.awssdk/s3 -->
+		</dependency>
 	</dependencies>
 
 	<build>
