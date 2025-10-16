@@ -42,12 +42,14 @@ public class EventController {
     @GetMapping("/events/{id}")
     public ResponseEntity<?> getEvent(@PathVariable("id") Long id) {
         Event output = eventService.getEvent(id);
+        System.out.println("Event images from DB: " + output.getImages()); // ✅ Add this line
         if (output != null) {
             return ResponseEntity.ok(LabMapper.INSTANCE.getEventDto(output));
-        }else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND,"The given id is no found");
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "The given id is not found");
         }
     }
+
 
     @PostMapping("/events")
     public ResponseEntity<?> addEvent(@RequestBody Event event) {

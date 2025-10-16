@@ -3,6 +3,7 @@ package se331.lab.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -26,6 +27,9 @@ public class Event {
     Organizer organizer;
     @ManyToMany(mappedBy = "eventHistory")
     List<Participant> participants;
+    @ElementCollection(fetch = FetchType.EAGER)
+    List<String> images = new ArrayList<>();
+
 }
 
 
